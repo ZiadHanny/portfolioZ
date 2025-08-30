@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
 :root {
   --background: #ffffff;
-  /* --foreground: #171717; */
+  --foreground: #171717;
+  --font-caveat: 'Caveat', cursive; /* ✅ تعريف الخط */
 }
 
 @theme inline {
@@ -10,11 +12,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-caveat: var(--font-caveat); /* ✅ ربط الخط كـ font في Tailwind */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #0a0a0a; */
     --foreground: #ededed;
   }
 }
@@ -23,4 +25,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }

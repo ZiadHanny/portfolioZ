@@ -18,33 +18,38 @@ const container = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
-        transition: {
-            staggerChildren: 0.2, // delay between each card
-        },
+        transition: { staggerChildren: 0.15 },
     },
 };
 
 const item = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    hidden: { opacity: 0, y: 30 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: "easeOut" as const },
+    },
 };
 
 const Skills = () => {
     return (
-        <section id="skills" className="px-8 md:px-16 py-20 text-center">
+        <section
+            id="skills"
+            className="px-4 sm:px-6 md:px-12 lg:px-20 py-16 md:py-20 text-center bg-gradient-to-b from-white to-gray-50"
+        >
             {/* Title */}
             <motion.h2
-                className="text-3xl md:text-4xl font-semibold mb-12"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-gray-700"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                My <span className="font-bold">Skills</span>
+                My <span className="text-black">Skills</span>
             </motion.h2>
 
             {/* Skills Grid */}
             <motion.div
-                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 place-items-center"
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 place-items-center"
                 variants={container}
                 initial="hidden"
                 animate="show"
@@ -52,14 +57,29 @@ const Skills = () => {
                 {skillsData.map((skill, i) => (
                     <motion.div
                         key={i}
-                        // variants={item}
-                        whileHover={{ scale: 1.1, boxShadow: "0px 8px 20px rgba(0,0,0,0.15)" }}
-                        className="w-32 h-32 flex flex-col items-center justify-center border rounded-md shadow-sm bg-white cursor-pointer"
+                        variants={item}
+                        animate={{
+                            y: [0, -10, 0], // يتحرك لفوق شوية وينزل تاني
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut",
+                            delay: i * 0.2, // ⏳ كل عنصر يبدأ متأخر شوية
+                        }}
+                        whileHover={{
+                            scale: 1.12,
+                            boxShadow: "0px 10px 25px rgba(0,0,0,0.15)",
+                        }}
+                        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center border border-gray-200 rounded-xl sm:rounded-2xl shadow-md bg-white cursor-pointer transition"
                     >
-                        <div className="mb-2 text-black w-12 h-12 flex items-center justify-center">
+                        <div className="mb-2 sm:mb-3 text-black w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center">
                             {skill.icon}
                         </div>
-                        <p className="text-sm font-medium text-black">{skill.name}</p>
+                        <p className="text-xs sm:text-sm md:text-base font-medium text-gray-800">
+                            {skill.name}
+                        </p>
                     </motion.div>
                 ))}
             </motion.div>
