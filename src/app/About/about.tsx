@@ -41,31 +41,11 @@ const About = () => {
 					</h2>
 
 					<p className="mt-6 text-gray-700 leading-relaxed text-lg">
-						I am a passionate, self-proclaimed designer who specializes in full
-						stack development{" "}
-						<span className="font-semibold">(React.js & Node.js)</span>.
-						User experience, pixel-perfect design, and writing clear,
-						readable, highly performant code matter to me.
-					</p>
-
-					<p className="mt-4 text-gray-700 leading-relaxed text-lg">
-						I began my journey as a web developer in{" "}
-						<span className="font-semibold">2015</span>, and since then,
-						I have continued to grow and evolve as a developer—taking on new
-						challenges and learning the latest technologies along the way.
-						Now, I am building cutting-edge applications with{" "}
-						<span className="font-semibold">
-							Next.js, TypeScript, NestJS, TailwindCSS, Supabase
-						</span>{" "}
-						and more.
-					</p>
-
-					<p className="mt-4 text-gray-700 leading-relaxed text-lg">
-						When I am not in full-on developer mode, you can find me on
-						Twitter or Indie Hackers, witnessing the journey of early startups
-						or enjoying some free time.
-						Follow me on <span className="text-black font-semibold">Twitter</span> or check out my{" "}
-						<span className="text-black font-semibold">GitHub</span>.
+						Passionate and results-driven Frontend Developer with a solid background in computer science and hands-on
+						experience in building interactive, responsive, and scalable web applications. Skilled in using modern JavaScript
+						frameworks such as React.js and Next.js to create user-centric interfaces that enhance performance and deliver
+						seamless user experiences across multiple devices. Demonstrates strong problem-solving abilities, clean coding
+						practices, and a deep understanding of frontend architecture, component-based design, and state management.
 					</p>
 				</motion.div>
 			</div>

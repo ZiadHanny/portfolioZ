@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Circle } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +10,17 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="w-full bg-white shadow-md px-6 md:px-12 py-4 flex items-center justify-between sticky overflow-hidden top-0 z-50"
+      className="w-full bg-white shadow-md px-6 md:px-12 py-4 flex items-center justify-between sticky top-0 z-50"
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Logo */}
-      <div className="text-2xl font-bold flex items-center text-black gap-2 tracking-wide">
+      <div
+        className="text-2xl font-bold flex items-center text-black gap-2 tracking-wide cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <Circle size={18} className="text-gray-900" />
         <span className="w-[18px] font-caveat">ZHM</span>
       </div>
 
@@ -37,7 +42,8 @@ const Navbar = () => {
       {/* Resume button (Desktop only) */}
       <motion.a
         href="https://drive.google.com/file/d/1BUJu7bJ_KSRc0BWICHHzX3NBriLhE30_/view?usp=drive_link"
-        download
+        target="_blank"
+        rel="noopener noreferrer"
         className="hidden md:flex bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg items-center gap-2 shadow-md hover:shadow-lg hover:scale-105 transition"
         whileHover={{ y: -2 }}
       >
@@ -85,7 +91,8 @@ const Navbar = () => {
             ))}
             <a
               href="https://drive.google.com/file/d/1BUJu7bJ_KSRc0BWICHHzX3NBriLhE30_/view?usp=drive_link"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition"
               onClick={() => setIsOpen(false)}
             >

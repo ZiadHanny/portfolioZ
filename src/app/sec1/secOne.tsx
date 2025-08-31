@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { IMAGES } from "../components/Images";
 
 // Animation Variants
 const fadeInLeft = {
@@ -41,9 +42,10 @@ const SecOne = () => {
 
         {/* Description */}
         <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
-          Passionate about building interactive, modern web applications.
-          Skilled in React, Next.js, and UI/UX design, always aiming for clean
-          and scalable code that brings ideas to life.
+          Frontend Developer with 2+ years building high-performance React and Next.js applications. Skilled in TypeScript,
+          React Query, and responsive design. Delivered scalable UI systems and performance optimizations that reduced load
+          times by ~40% and improved user engagement. Seeking Frontend Engineer roles focused on performance and scalable
+          architectures.
         </p>
 
         {/* Social Buttons */}
@@ -54,22 +56,22 @@ const SecOne = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <a
-            href="#"
-            className="px-5 py-2 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 hover:scale-105 transition-transform"
+            href="https://www.linkedin.com/in/ziad-hany-9a45b7236/"
+            className="px-2 py-2  text-white rounded-lg shadow-md hover:bg-gray-500 hover:scale-105 transition-transform"
           >
-            LinkedIn
+            <IMAGES.ICONS.LinkedIn />
           </a>
           <a
-            href="#"
-            className="px-5 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
+            href="https://github.com/ZiadHanny"
+            className="px-2 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
           >
-            GitHub
+            <IMAGES.ICONS.GitHub />
           </a>
           <a
-            href="#"
-            className="px-5 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
+            href=" mailto:ziadhanny579@gmail.com.com?subject=Hello&body=I want to contact you"
+            className="px-2 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
           >
-            Instagram
+            <IMAGES.ICONS.Email />
           </a>
         </motion.div>
       </motion.div>

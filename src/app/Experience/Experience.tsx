@@ -5,24 +5,28 @@ import Card from "../components/card";
 
 const experiences = [
     {
-        title: "Lead Software Engineer at Google",
-        date: "Nov 2019 – Present",
-        description:
-            "Played a pivotal role in developing innovative solutions for Google's core search algorithms. Optimized search accuracy and user experiences for millions of users.",
+        title: "Front-End Developer — SamTech Middle East (Remote, Egypt)",
+        date: "Aug 2024 – Present",
+        description: `
+      • Designed and implemented highly responsive, user-friendly web interfaces using HTML, CSS, and JavaScript, improving page load times and user engagement. 
+      • Collaborated with UI/UX designers to translate complex mockups into interactive, pixel-perfect components, enhancing the overall user experience. 
+      • Worked with backend developers to integrate APIs and dynamic features seamlessly, ensuring smooth functionality across web applications. 
+      • Leveraged Git for version control, code reviews, and collaborative development, reducing bugs and accelerating feature delivery. 
+      • Optimized website performance and ensured cross-browser and cross-device compatibility, increasing accessibility and usability.
+    `,
     },
     {
-        title: "Software Engineer at YouTube",
-        date: "Jan 2017 – Oct 2019",
-        description:
-            "Focused on the design and implementation of backend systems for YouTube’s platform, working on large-scale data processing and user engagement features.",
-    },
-    {
-        title: "Junior Software Engineer at Apple",
-        date: "Jan 2016 – Dec 2017",
-        description:
-            "Contributed to mission-critical projects, designing scalable systems and providing technical leadership to cross-functional teams.",
+        title: "Full Stack Developer Trainee — AMIT Learning",
+        date: "Nov 2023 – May 2024",
+        description: `
+      • Completed intensive full-stack training with emphasis on clean architecture, RESTful API development, and Agile methodologies. 
+      • Developed and delivered multiple full-stack projects, implementing backend logic, database integration, and dynamic front-end interfaces. 
+      • Collaborated in teams using Git-based workflows, enhancing version control, code quality, and project management skills. 
+      • Applied modern best practices to optimize performance, maintainable code, and scalable application structures.
+    `,
     },
 ];
+
 
 // Animation Variants
 const container = {
@@ -55,7 +59,7 @@ const Experience = () => {
 
                 {/* Experience List */}
                 <motion.div
-                    className="relative grid gap-10 md:gap-14 md:grid-cols-2"
+                    className="relative grid gap-10 md:gap-14 md:grid-cols-1"
                     variants={container}
                     initial="hidden"
                     whileInView="show"

@@ -10,7 +10,7 @@ const projectsData = [
         title: "Crypto Screener Application",
         description:
             "I'm Even Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-        image: "/project1.png",
+        image: "/image 770 (1).png",
         link: "#",
     },
     {
@@ -18,7 +18,7 @@ const projectsData = [
         title: "Euphoria – Ecommerce (Apparels) Website Template",
         description:
             "I'm Even Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-        image: "/project2.png",
+        image: "/image 770.png",
         link: "#",
     },
     {
@@ -26,7 +26,7 @@ const projectsData = [
         title: "Blog Website Template",
         description:
             "I'm Even Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-        image: "/project3.png",
+        image: "/image 771.png",
         link: "#",
     },
 ];
