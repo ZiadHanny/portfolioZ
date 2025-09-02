@@ -41,13 +41,13 @@ const Navbar = () => {
 
       {/* Resume button (Desktop only) */}
       <motion.a
-        href="https://drive.google.com/file/d/1BUJu7bJ_KSRc0BWICHHzX3NBriLhE30_/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1fD8QemMWXa3WbYNHTklYCzFnPFn-xOAO/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg items-center gap-2 shadow-md hover:shadow-lg hover:scale-105 transition"
         whileHover={{ y: -2 }}
       >
-        CV
+        My Resume
       </motion.a>
 
       {/* Hamburger (Mobile only) */}
@@ -96,7 +96,7 @@ const Navbar = () => {
               className="bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition"
               onClick={() => setIsOpen(false)}
             >
-              CV
+              My Resume
             </a>
           </motion.div>
         )}

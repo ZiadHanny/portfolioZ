@@ -33,7 +33,7 @@ const Skills = () => {
                     className="flex gap-8 sm:gap-10 md:gap-12"
                     animate={{ x: ["0%", "-100%"] }}
                     transition={{
-                        duration: 10, // 👈 سرعة السليدر
+                        duration: 50, // 👈 سرعة السليدر
                         ease: "linear",
                         repeat: Infinity,
                     }}
