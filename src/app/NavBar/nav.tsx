@@ -41,7 +41,7 @@ const Navbar = () => {
 
       {/* Resume button (Desktop only) */}
       <motion.a
-        href="https://drive.google.com/file/d/1fD8QemMWXa3WbYNHTklYCzFnPFn-xOAO/view?usp=sharing"
+        href="https://drive.google.com/file/d/1T_zovkGEYL7wQHc_50OMjEkyDCbcsWOH/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg items-center gap-2 shadow-md hover:shadow-lg hover:scale-105 transition"
