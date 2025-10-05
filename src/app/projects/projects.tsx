@@ -7,15 +7,15 @@ import { motion } from "framer-motion";
 const projectsData = [
 	{
 		id: "01",
-		title: "Crypto Screener Application",
+		title: "Website Builder",
 		description:
 			"I'm Ziad Hany Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
 		image: "/image 770 (1).png",
-		link: "#",
+		link: "https://website-builder-alpha-one.vercel.app/",
 	},
 	{
 		id: "02",
-		title: "Euphoria – Ecommerce (Apparels) Website Template",
+		title: "Website Builder ",
 		description:
 			"I'm Ziad Hany Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
 		image: "/image 770.png",
