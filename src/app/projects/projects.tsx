@@ -10,7 +10,7 @@ const projectsData = [
 		title: "Website Builder",
 		description:
 			"I'm Ziad Hany Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-		image: "/image 770 (1).png",
+		image: "/website.png",
 		link: "https://website-builder-alpha-one.vercel.app/",
 	},
 	{

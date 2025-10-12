@@ -39,9 +39,8 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Resume button (Desktop only) */}
       <motion.a
-        href="https://drive.google.com/file/d/1T_zovkGEYL7wQHc_50OMjEkyDCbcsWOH/view?usp=sharing"
+        href="https://drive.google.com/file/d/1znKWsV0YOpluYzmHYV8dr4UIz6EN8tPU/view?usp=drive_link"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg items-center gap-2 shadow-md hover:shadow-lg hover:scale-105 transition"
@@ -50,7 +49,6 @@ const Navbar = () => {
         My Resume
       </motion.a>
 
-      {/* Hamburger (Mobile only) */}
       <button
         className="md:hidden flex flex-col gap-1.5 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
@@ -90,7 +88,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://drive.google.com/file/d/1BUJu7bJ_KSRc0BWICHHzX3NBriLhE30_/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1znKWsV0YOpluYzmHYV8dr4UIz6EN8tPU/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-black to-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition"
