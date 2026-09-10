@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZHM",
+  title: "Ziad Hany — Frontend Developer",
+  description:
+    "Portfolio of Ziad Hany, a Frontend Developer specializing in React, Next.js and TypeScript.",
   icons: {
     icon: "/favicon.png",
   },
@@ -25,9 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-
-    >
+    <html lang="en">
       <head>
         <link rel="icon" href="/circle.png" />
       </head>

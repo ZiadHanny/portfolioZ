@@ -3,8 +3,10 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --font-caveat: 'Caveat', cursive; /* ✅ تعريف الخط */
+  --foreground: #0f0f14;
+  --accent-from: #4f46e5;
+  --accent-to: #d946ef;
+  --font-caveat: 'Caveat', cursive;
 }
 
 @theme inline {
@@ -12,13 +14,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-caveat: var(--font-caveat); /* ✅ ربط الخط كـ font في Tailwind */
+  --font-caveat: var(--font-caveat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a5b4fc transparent;
 }
 
 body {
@@ -31,11 +32,69 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-from), var(--accent-to));
+  border-radius: 999px;
+}
+
+/* Gradient text used across sections */
+.gradient-text {
+  background-image: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Soft blurred glow blobs used as decorative background accents */
+.glow-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 35s linear infinite;
+}
+
+.animate-scroll.paused {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+.animate-blob {
+  animation: blob 14s ease-in-out infinite;
 }

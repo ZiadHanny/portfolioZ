@@ -16,26 +16,43 @@ const fadeInRight = {
 
 const SecOne = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-16 py-14 sm:py-20 bg-gradient-to-r from-white via-gray-50 to-white">
+    <section
+      id="home"
+      className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-16 py-14 sm:py-20 bg-gradient-to-b from-white via-indigo-50/40 to-white"
+    >
+      {/* Decorative glow blobs */}
+      <div className="glow-blob animate-blob w-72 h-72 bg-indigo-300/30 -top-10 -left-10" />
+      <div className="glow-blob animate-blob w-72 h-72 bg-fuchsia-300/30 top-1/3 right-0 [animation-delay:3s]" />
+
       {/* Left Section (Text) */}
       <motion.div
-        className="md:w-1/2 space-y-6 text-center md:text-left"
+        className="relative z-10 md:w-1/2 space-y-6 text-center md:text-left"
         variants={fadeInLeft}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black leading-tight">
-          Hello, I’m{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-700">
-            Ziad Hany
+        <motion.span
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-700"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
           </span>
+          Available for new opportunities
+        </motion.span>
+
+        {/* Heading */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Hello, I’m <span className="gradient-text">Ziad Hany</span>
         </h1>
 
         <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
           Frontend{" "}
-          <span className="border-2 border-black px-3 py-1 rounded-md shadow-sm inline-block">
+          <span className="border-2 border-indigo-600 text-indigo-700 px-3 py-1 rounded-md shadow-sm inline-block">
             Developer
           </span>
         </h2>
@@ -48,54 +65,82 @@ const SecOne = () => {
           architectures.
         </p>
 
-        {/* Social Buttons */}
+        {/* CTA + Social */}
         <motion.div
-          className="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4 mt-8"
+          className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <a
-            href="https://www.linkedin.com/in/ziad-hany-9a45b7236/"
-            className="px-2 py-2  text-white rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transition-transform"
+            href="#contactme"
+            className="px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white font-medium shadow-md shadow-indigo-200 hover:shadow-lg hover:scale-105 transition-transform"
           >
-            <IMAGES.ICONS.LinkedIn size={30} />
+            Contact Me
           </a>
-          <a
-            href="https://github.com/ZiadHanny"
-            className="px-2 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
-          >
-            <IMAGES.ICONS.GitHub size={30} />
-          </a>
-          <a
-            href=" mailto:ziadhanny579@gmail.com.com?subject=Hello&body=I want to contact you"
-            className="px-2 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
-          >
-            <IMAGES.ICONS.Email size={30} />
-          </a>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/ziad-hany-9a45b7236/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:text-indigo-600 hover:border-indigo-300 hover:scale-105 transition-transform"
+            >
+              <IMAGES.ICONS.LinkedIn size={26} />
+            </a>
+            <a
+              href="https://github.com/ZiadHanny"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:text-indigo-600 hover:border-indigo-300 hover:scale-105 transition-transform"
+            >
+              <IMAGES.ICONS.GitHub size={26} />
+            </a>
+            <a
+              href="mailto:ziadhanny579@gmail.com?subject=Hello&body=I want to contact you"
+              className="p-2 border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:text-indigo-600 hover:border-indigo-300 hover:scale-105 transition-transform"
+            >
+              <IMAGES.ICONS.Email size={26} />
+            </a>
+          </div>
         </motion.div>
       </motion.div>
 
       {/* Right Section (Image) */}
       <motion.div
-        className="md:w-1/2 mt-10 md:mt-0 flex justify-center relative"
+        className="relative z-10 md:w-1/2 mt-10 md:mt-0 flex justify-center"
         variants={fadeInRight}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <Image
-          src="/Banner.svg"
-          alt="Illustration"
-          width={550}
-          height={550}
-          className="w-[250px] sm:w-[350px] md:w-[550px] drop-shadow-xl rounded-lg"
-          priority
-        />
+        <div className="animate-float">
+          <Image
+            src="/Banner.svg"
+            alt="Illustration"
+            width={550}
+            height={550}
+            className="w-[250px] sm:w-[350px] md:w-[550px] drop-shadow-xl rounded-lg"
+            priority
+          />
+        </div>
 
         {/* Decorative Glow Effect */}
-        <div className="absolute -bottom-8 -right-8 w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 bg-gradient-to-r from-black/10 to-gray-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-8 -right-8 w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 bg-gradient-to-r from-indigo-400/20 to-fuchsia-400/30 rounded-full blur-3xl"></div>
       </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.a
+        href="#aboutme"
+        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-1 text-gray-400 hover:text-indigo-600 transition"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <span className="text-xs tracking-wide">Scroll</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </motion.a>
     </section>
   );
 };

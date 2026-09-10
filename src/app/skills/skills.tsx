@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { IMAGES } from "../components/Images";
 
@@ -17,35 +17,42 @@ const skillsData = [
 ];
 
 const Skills = () => {
+    const [paused, setPaused] = useState(false);
+
     return (
         <section
             id="skills"
-            className="overflow-hidden w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-20"
+            className="overflow-hidden w-full bg-gradient-to-b from-white to-indigo-50/40 py-16 md:py-20"
         >
             {/* Title */}
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-gray-700">
-                My <span className="text-black">Skills</span>
-            </h2>
+            <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-gray-800"
+            >
+                My <span className="gradient-text">Skills</span>
+            </motion.h2>
 
             {/* Slider Wrapper */}
-            <div className="relative w-full overflow-hidden">
-                <motion.div
-                    className="flex gap-8 sm:gap-10 md:gap-12"
-                    animate={{ x: ["0%", "-100%"] }}
-                    transition={{
-                        duration: 50, // 👈 سرعة السليدر
-                        ease: "linear",
-                        repeat: Infinity,
-                    }}
-                >
+            <div
+                className="relative w-full overflow-hidden"
+                onMouseEnter={() => setPaused(true)}
+                onMouseLeave={() => setPaused(false)}
+            >
+                {/* Edge fade masks */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
+                <div className={`flex gap-8 sm:gap-10 md:gap-12 animate-scroll ${paused ? "paused" : ""}`}>
                     {[...skillsData, ...skillsData].map((skill, i) => (
                         <div
                             key={i}
-                            className="min-w-[100px] sm:min-w-[120px] md:min-w-[140px] h-28 flex flex-col items-center justify-center border border-gray-200 rounded-xl sm:rounded-2xl shadow-md bg-white"
+                            className="min-w-[100px] sm:min-w-[120px] md:min-w-[140px] h-28 flex flex-col items-center justify-center border border-gray-200 rounded-xl sm:rounded-2xl shadow-md bg-white hover:-translate-y-1.5 hover:shadow-lg hover:border-indigo-200 transition-all duration-300"
                         >
                             {/* أيقونة */}
-                            <div className="mb-2 text-black w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center">
+                            <div className="mb-2 text-gray-800 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center">
                                 {skill.icon}
                             </div>
                             <p className="text-xs sm:text-sm md:text-base font-medium text-gray-800">
@@ -53,7 +60,7 @@ const Skills = () => {
                             </p>
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

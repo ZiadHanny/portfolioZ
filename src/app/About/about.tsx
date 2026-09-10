@@ -3,13 +3,21 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const stats = [
+	{ value: "2+", label: "Years Experience" },
+	{ value: "10+", label: "Projects Delivered" },
+	{ value: "40%", label: "Avg. Load Time Cut" },
+];
+
 const About = () => {
 	return (
 		<section
 			id="aboutme"
-			className="py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-r from-white via-gray-50 to-white"
+			className="relative py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden"
 		>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+			<div className="glow-blob w-64 h-64 bg-indigo-200/30 top-10 right-10" />
+
+			<div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
 				{/* صورة جانبية */}
 				<motion.div
 					className="flex justify-center"
@@ -37,7 +45,7 @@ const About = () => {
 					viewport={{ once: true }}
 				>
 					<h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-						About <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-700">Me</span>
+						About <span className="gradient-text">Me</span>
 					</h2>
 
 					<p className="mt-6 text-gray-700 leading-relaxed text-lg">
@@ -47,6 +55,25 @@ const About = () => {
 						seamless user experiences across multiple devices. Demonstrates strong problem-solving abilities, clean coding
 						practices, and a deep understanding of frontend architecture, component-based design, and state management.
 					</p>
+
+					{/* Stats */}
+					<motion.div
+						className="mt-10 grid grid-cols-3 gap-4"
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6, delay: 0.2 }}
+						viewport={{ once: true }}
+					>
+						{stats.map((stat, i) => (
+							<div
+								key={i}
+								className="rounded-xl border border-gray-100 bg-white shadow-sm py-4 px-2 hover:shadow-md hover:-translate-y-1 transition-transform"
+							>
+								<p className="text-2xl md:text-3xl font-extrabold gradient-text">{stat.value}</p>
+								<p className="text-xs md:text-sm text-gray-500 mt-1">{stat.label}</p>
+							</div>
+						))}
+					</motion.div>
 				</motion.div>
 			</div>
 		</section>
