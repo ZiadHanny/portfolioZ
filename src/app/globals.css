@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-caveat: 'Caveat', cursive; /* ✅ تعريف الخط */
+  --background: #050414;
+  --foreground: #f4f4f8;
+  --surface: #0b0a1f;
+  --accent-from: #4338ca;
+  --accent-via: #7e22ce;
+  --accent-to: #c026d3;
+  --font-caveat: 'Caveat', cursive;
 }
 
 @theme inline {
@@ -12,13 +16,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-caveat: var(--font-caveat); /* ✅ ربط الخط كـ font في Tailwind */
+  --font-caveat: var(--font-caveat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7e22ce transparent;
 }
 
 body {
@@ -31,11 +34,110 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: #7e22ce;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-from), var(--accent-to));
+  border-radius: 999px;
+}
+
+/* Recolors a monochrome brand-icon SVG with the site's gradient,
+   without disturbing icons that intentionally use fill="none". */
+.icon-gradient svg :is(path, circle, ellipse, rect):not([fill="none"]) {
+  fill: url(#skillIconGradient);
+}
+
+.icon-gradient svg [stroke]:not([stroke="none"]) {
+  stroke: url(#skillIconGradient);
+}
+
+/* Gradient text used across sections */
+.gradient-text {
+  background-image: linear-gradient(90deg, var(--accent-from), var(--accent-via), var(--accent-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Soft blurred glow blobs used as decorative background accents */
+.glow-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* A light "spotlight" panel used to host line-art illustrations on the
+   deep background, since their strokes are drawn for a light surface. */
+.illustration-card {
+  background: linear-gradient(145deg, #ffffff, #f1f0fb);
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 80px -20px rgba(88, 28, 135, 0.55);
+}
+
+/* Cursor-tracked spotlight glow. Set --mx / --my (0-100) via JS on mousemove. */
+.cursor-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    600px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(124, 58, 237, 0.18),
+    transparent 60%
+  );
+  transition: background 0.1s ease-out;
+}
+
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 .animate-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 35s linear infinite;
+}
+
+.animate-scroll.paused {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+.animate-blob {
+  animation: blob 14s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }
