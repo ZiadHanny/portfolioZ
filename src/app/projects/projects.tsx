@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { ExternalLink, LayoutDashboard } from "lucide-react";
+import { Accessibility, ExternalLink, Github, LayoutDashboard } from "lucide-react";
 import { motion } from "framer-motion";
 import MouseTilt from "../components/MouseTilt";
 
@@ -26,6 +26,17 @@ const projectsData = [
 	},
 	{
 		id: "03",
+		title: "Accessible Text↔Speech Assistant",
+		description:
+			"A client-side-only text-to-speech and speech-to-text web app built around WCAG 2.1 AA compliance from day one: full keyboard operability, a shared aria-live announcer, manually-verified color contrast, and an automated axe-core accessibility check running in CI on every PR.",
+		image: null,
+		icon: Accessibility,
+		link: "https://ziadhanny.github.io/accessible-voice-text/",
+		githubLink: "https://github.com/ZiadHanny/accessible-voice-text",
+		tags: ["React", "TypeScript", "Vite", "WCAG 2.1 AA", "Web Speech API"],
+	},
+	{
+		id: "04",
 		title: "Website Builder",
 		description:
 			"A drag-and-drop website builder concept focused on a fast, intuitive editing experience for creating and previewing pages in real time.",
@@ -34,7 +45,7 @@ const projectsData = [
 		tags: ["React", "Next.js"],
 	},
 	{
-		id: "04",
+		id: "05",
 		title: "Website Builder",
 		description:
 			"A follow-up iteration of the website builder, exploring additional layout blocks and a refreshed component library.",
@@ -43,7 +54,7 @@ const projectsData = [
 		tags: ["React", "UI/UX"],
 	},
 	{
-		id: "05",
+		id: "06",
 		title: "Shopwise E-commerce Website",
 		description:
 			"An e-commerce platform that allows users to browse products, add them to the shopping cart, and complete purchases easily.",
@@ -102,7 +113,10 @@ const Projects = () => {
 											/>
 										) : (
 											<div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-fuchsia-900 transition duration-500 group-hover:brightness-90">
-												<LayoutDashboard size={64} className="text-white/70" />
+												{React.createElement(project.icon ?? LayoutDashboard, {
+													size: 64,
+													className: "text-white/70",
+												})}
 											</div>
 										)}
 										<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/40">
@@ -142,20 +156,36 @@ const Projects = () => {
 								<p className="text-gray-300 mb-6 leading-relaxed">
 									{project.description}
 								</p>
-								{project.link !== "#" && (
-									<a
-										href={project.link}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
-									>
-										<ExternalLink className="w-5 h-5" />
-										<span className="relative">
-											Visit
-											<span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span>
-										</span>
-									</a>
-								)}
+								<div className="flex items-center justify-center md:justify-start gap-5">
+									{project.link !== "#" && (
+										<a
+											href={project.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
+										>
+											<ExternalLink className="w-5 h-5" />
+											<span className="relative">
+												Visit
+												<span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span>
+											</span>
+										</a>
+									)}
+									{project.githubLink && (
+										<a
+											href={project.githubLink}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
+										>
+											<Github className="w-5 h-5" />
+											<span className="relative">
+												Code
+												<span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span>
+											</span>
+										</a>
+									)}
+								</div>
 							</motion.div>
 						</div>
 					))}
