@@ -6,7 +6,17 @@ import Card from "../components/card";
 
 const experiences = [
     {
-        title: "Front-End Developer — SamTech Middle East (Remote, Egypt)",
+        title: "Software Developer — Etmam Advance Technology (Onsite, Saudi Arabia)",
+        date: "Apr 2026 – Present",
+        description: `
+      • Developed and customized HR, ERP, and Fleet Management Systems for the land transportation sector.
+      • Built responsive and scalable web interfaces using modern frontend technologies to enhance user experience and operational efficiency.
+      • Integrated backend APIs and implemented business workflows, dashboards, and operational modules.
+      • Improved system performance, accessibility, and cross-browser compatibility while collaborating with cross-functional teams using Git workflows.
+    `,
+    },
+    {
+        title: "Front-End Developer — SamTech Middle East (Remote, UAE, Dubai)",
         date: "Aug 2024 – Present",
         description: `
       • Designed and implemented highly responsive, user-friendly web interfaces using HTML, CSS, and JavaScript, improving page load times and user engagement.
@@ -17,8 +27,8 @@ const experiences = [
     `,
     },
     {
-        title: "Full Stack Developer Trainee — AMIT Learning",
-        date: "Nov 2023 – May 2024",
+        title: "Full Stack Developer Trainee — AMIT Learning (Onsite, Egypt)",
+        date: "Nov 2023 – Mar 2024",
         description: `
       • Completed intensive full-stack training with emphasis on clean architecture, RESTful API development, and Agile methodologies.
       • Developed and delivered multiple full-stack projects, implementing backend logic, database integration, and dynamic front-end interfaces.
@@ -56,9 +66,9 @@ const item = {
 
 const Experience = () => {
     return (
-        <section id="experience" className="relative bg-gradient-to-b from-gray-950 to-black text-white py-16 md:py-24 overflow-hidden">
-            <div className="glow-blob w-72 h-72 bg-indigo-600/20 top-0 left-1/4" />
-            <div className="glow-blob w-72 h-72 bg-fuchsia-600/10 bottom-0 right-1/4" />
+        <section id="experience" className="relative bg-gradient-to-b from-[#0d0a22] to-[#050414] text-white py-16 md:py-24 overflow-hidden">
+            <div className="glow-blob w-72 h-72 bg-indigo-700/25 top-0 left-1/4" />
+            <div className="glow-blob w-72 h-72 bg-fuchsia-700/15 bottom-0 right-1/4" />
 
             <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
                 {/* Section Title */}
@@ -87,10 +97,11 @@ const Experience = () => {
                         <motion.div
                             key={idx}
                             variants={item}
+                            whileHover={{ x: 4 }}
                             className="relative"
                         >
                             {/* Timeline Dot */}
-                            <div className="absolute -left-6 top-3 hidden md:flex items-center justify-center w-4 h-4 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 ring-4 ring-black">
+                            <div className="absolute -left-6 top-3 hidden md:flex items-center justify-center w-4 h-4 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 ring-4 ring-[#050414]">
                                 <Briefcase size={9} className="text-white" />
                             </div>
 

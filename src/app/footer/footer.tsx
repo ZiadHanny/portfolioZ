@@ -29,14 +29,15 @@ const fadeInScale = (delay = 0) => ({
 const Footer = () => {
     return (
 
-        <footer id="contactme" className="relative bg-gradient-to-b from-white to-indigo-50/60 border-t border-gray-200 overflow-hidden">
-            <div className="glow-blob w-72 h-72 bg-indigo-300/20 -bottom-10 left-1/4" />
+        <footer id="contactme" className="relative bg-gradient-to-b from-[#0b0a1f] to-[#050414] border-t border-white/10 overflow-hidden">
+            <div className="glow-blob w-72 h-72 bg-indigo-700/20 -bottom-10 left-1/4" />
 
             {/* Main Section */}
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
                 <motion.div
                     {...fadeInUp(0)}
-                    className="rounded-3xl bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-6 py-10 md:px-14 md:py-14 flex flex-col md:flex-row justify-between items-center gap-10 shadow-xl shadow-indigo-200"
+                    whileHover={{ scale: 1.01 }}
+                    className="rounded-3xl bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 px-6 py-10 md:px-14 md:py-14 flex flex-col md:flex-row justify-between items-center gap-10 shadow-xl shadow-purple-950/60 border border-white/10"
                 >
                     {/* Left Section */}
                     <div className="text-center md:text-left">
@@ -109,7 +110,7 @@ const Footer = () => {
 
                     {/* Copyright */}
                     <span className="text-gray-500 text-center md:text-right font-caveat text-lg">
-                        © 2025 ZHM — Ziad Hany
+                        © {new Date().getFullYear()} ZHM — Ziad Hany
                     </span>
                 </div>
             </motion.div>

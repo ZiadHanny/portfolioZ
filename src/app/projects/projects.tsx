@@ -1,12 +1,31 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, LayoutDashboard } from "lucide-react";
 import { motion } from "framer-motion";
+import MouseTilt from "../components/MouseTilt";
 
 const projectsData = [
 	{
 		id: "01",
+		title: "Tabe3 — Fleet Management System",
+		description:
+			"A complete fleet management system with real-time vehicle monitoring. Built live GPS tracking, interactive dashboards with advanced data tables and filters, and a secure admin panel with role-based access control and full CRUD modules for fleets, drivers, and assets.",
+		image: null,
+		link: "#",
+		tags: ["Next.js", "TypeScript", "React Query", "Styled-Components"],
+	},
+	{
+		id: "02",
+		title: "Taskey",
+		description:
+			"A scalable business dashboard built with SamTech Middle East to visualize and manage operational data — fully customized charts, tables, and filters, plus barcode/QR code scanning to streamline daily workflows.",
+		image: null,
+		link: "#",
+		tags: ["Next.js", "TypeScript", "React Query", "RESTful APIs"],
+	},
+	{
+		id: "03",
 		title: "Website Builder",
 		description:
 			"A drag-and-drop website builder concept focused on a fast, intuitive editing experience for creating and previewing pages in real time.",
@@ -15,7 +34,7 @@ const projectsData = [
 		tags: ["React", "Next.js"],
 	},
 	{
-		id: "02",
+		id: "04",
 		title: "Website Builder",
 		description:
 			"A follow-up iteration of the website builder, exploring additional layout blocks and a refreshed component library.",
@@ -24,7 +43,7 @@ const projectsData = [
 		tags: ["React", "UI/UX"],
 	},
 	{
-		id: "03",
+		id: "05",
 		title: "Shopwise E-commerce Website",
 		description:
 			"An e-commerce platform that allows users to browse products, add them to the shopping cart, and complete purchases easily.",
@@ -38,8 +57,8 @@ const Projects = () => {
 	return (
 		<section
 			id="projects"
-			className="relative bg-gradient-to-b from-black to-gray-950 text-white py-20 px-6 md:px-12 overflow-hidden">
-			<div className="glow-blob w-72 h-72 bg-fuchsia-600/10 top-0 right-1/4" />
+			className="relative bg-gradient-to-b from-[#050414] to-[#0b0a1f] text-white py-20 px-6 md:px-12 overflow-hidden">
+			<div className="glow-blob w-72 h-72 bg-fuchsia-700/15 top-0 right-1/4" />
 
 			<div className="relative z-10 max-w-6xl mx-auto">
 				<motion.h2
@@ -66,28 +85,34 @@ const Projects = () => {
 								viewport={{ once: true }}
 								className={`w-full flex justify-center ${index % 2 === 1 ? "md:order-2" : ""}`}
 							>
-								<motion.a
-									href={project.link}
-									target="_blank"
-									rel="noopener noreferrer"
-									whileHover={{ scale: 1.03 }}
-									transition={{ type: "spring", stiffness: 200 }}
-									className="group relative block rounded-xl overflow-hidden shadow-lg border border-white/10"
-								>
-									<Image
-										src={project.image}
-										alt={project.title}
-										width={600}
-										height={400}
-										className="rounded-xl transition duration-500 group-hover:brightness-75"
-									/>
-									<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/30">
-										<span className="flex items-center gap-2 text-white font-medium bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-4 py-2 rounded-lg">
-											<ExternalLink className="w-4 h-4" />
-											View Project
-										</span>
-									</div>
-								</motion.a>
+								<MouseTilt max={10} className="w-full">
+									<a
+										href={project.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="group relative block rounded-xl overflow-hidden shadow-lg border border-white/10"
+									>
+										{project.image ? (
+											<Image
+												src={project.image}
+												alt={project.title}
+												width={600}
+												height={400}
+												className="rounded-xl transition duration-500 group-hover:brightness-75 w-full h-auto"
+											/>
+										) : (
+											<div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-fuchsia-900 transition duration-500 group-hover:brightness-90">
+												<LayoutDashboard size={64} className="text-white/70" />
+											</div>
+										)}
+										<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/40">
+											<span className="flex items-center gap-2 text-white font-medium bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-4 py-2 rounded-lg">
+												<ExternalLink className="w-4 h-4" />
+												View Project
+											</span>
+										</div>
+									</a>
+								</MouseTilt>
 							</motion.div>
 
 							{/* النص */}
@@ -117,18 +142,20 @@ const Projects = () => {
 								<p className="text-gray-300 mb-6 leading-relaxed">
 									{project.description}
 								</p>
-								<a
-									href={project.link}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
-								>
-									<ExternalLink className="w-5 h-5" />
-									<span className="relative">
-										Visit
-										<span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span>
-									</span>
-								</a>
+								{project.link !== "#" && (
+									<a
+										href={project.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
+									>
+										<ExternalLink className="w-5 h-5" />
+										<span className="relative">
+											Visit
+											<span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span>
+										</span>
+									</a>
+								)}
 							</motion.div>
 						</div>
 					))}
