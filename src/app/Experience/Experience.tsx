@@ -19,10 +19,21 @@ const experiences = [
         title: "Full Stack Developer Trainee — AMIT Learning",
         date: "Nov 2023 – May 2024",
         description: `
-      • Completed intensive full-stack training with emphasis on clean architecture, RESTful API development, and Agile methodologies. 
+      • Completed intensive full-stack training with emphasis on clean architecture, RESTful API development, and Agile methodologies.
       • Developed and delivered multiple full-stack projects, implementing backend logic, database integration, and dynamic front-end interfaces. 
       • Collaborated in teams using Git-based workflows, enhancing version control, code quality, and project management skills. 
       • Applied modern best practices to optimize performance, maintainable code, and scalable application structures.
+    `,
+    },
+    {
+        title: "Computer Maintenance And Sales — Al Mostafa Company",
+        date: "Nov 2022 – May 2023",
+        description: `
+      • Completed intensive hands-on training in computer and laptop maintenance, troubleshooting, and repair.
+    Diagnosed and resolved hardware and software issues including motherboards, RAM, storage devices, and operating systems.
+    Performed system upgrades, formatting, and OS installations to enhance system performance and reliability.
+    Conducted preventive maintenance and applied data protection and optimization best practices.
+ Collaborated in a technical team environment, improving workflow efficiency, documentation, and customer service quality.
     `,
     },
 ];

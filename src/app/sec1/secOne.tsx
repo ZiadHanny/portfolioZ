@@ -57,21 +57,21 @@ const SecOne = () => {
         >
           <a
             href="https://www.linkedin.com/in/ziad-hany-9a45b7236/"
-            className="px-2 py-2  text-white rounded-lg shadow-md hover:bg-gray-500 hover:scale-105 transition-transform"
+            className="px-2 py-2  text-white rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transition-transform"
           >
-            <IMAGES.ICONS.LinkedIn />
+            <IMAGES.ICONS.LinkedIn size={30} />
           </a>
           <a
             href="https://github.com/ZiadHanny"
             className="px-2 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
           >
-            <IMAGES.ICONS.GitHub />
+            <IMAGES.ICONS.GitHub size={30} />
           </a>
           <a
             href=" mailto:ziadhanny579@gmail.com.com?subject=Hello&body=I want to contact you"
             className="px-2 py-2 border border-gray-400 text-black rounded-lg shadow-sm hover:bg-gray-100 hover:scale-105 transition-transform"
           >
-            <IMAGES.ICONS.Email />
+            <IMAGES.ICONS.Email size={30} />
           </a>
         </motion.div>
       </motion.div>
