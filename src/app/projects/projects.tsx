@@ -6,26 +6,9 @@ import { motion } from "framer-motion";
 import MouseTilt from "../components/MouseTilt";
 
 const projectsData = [
+
 	{
 		id: "01",
-		title: "Tabe3 — Fleet Management System",
-		description:
-			"A complete fleet management system with real-time vehicle monitoring. Built live GPS tracking, interactive dashboards with advanced data tables and filters, and a secure admin panel with role-based access control and full CRUD modules for fleets, drivers, and assets.",
-		image: null,
-		link: "#",
-		tags: ["Next.js", "TypeScript", "React Query", "Styled-Components"],
-	},
-	{
-		id: "02",
-		title: "Taskey",
-		description:
-			"A scalable business dashboard built with SamTech Middle East to visualize and manage operational data — fully customized charts, tables, and filters, plus barcode/QR code scanning to streamline daily workflows.",
-		image: null,
-		link: "#",
-		tags: ["Next.js", "TypeScript", "React Query", "RESTful APIs"],
-	},
-	{
-		id: "03",
 		title: "Accessible Text↔Speech Assistant",
 		description:
 			"A client-side-only text-to-speech and speech-to-text web app built around WCAG 2.1 AA compliance from day one: full keyboard operability, a shared aria-live announcer, manually-verified color contrast, and an automated axe-core accessibility check running in CI on every PR.",
@@ -36,34 +19,27 @@ const projectsData = [
 		tags: ["React", "TypeScript", "Vite", "WCAG 2.1 AA", "Web Speech API"],
 	},
 	{
-		id: "04",
+		id: "02",
 		title: "Website Builder",
 		description:
 			"A drag-and-drop website builder concept focused on a fast, intuitive editing experience for creating and previewing pages in real time.",
 		image: "/website.png",
 		link: "https://website-builder-alpha-one.vercel.app/",
+		githubLink: "https://github.com/ZiadHanny/WebsiteBuilder",
 		tags: ["React", "Next.js"],
 	},
 	{
-		id: "05",
-		title: "Website Builder",
-		description:
-			"A follow-up iteration of the website builder, exploring additional layout blocks and a refreshed component library.",
-		image: "/image 770.png",
-		link: "#",
-		tags: ["React", "UI/UX"],
-	},
-	{
-		id: "06",
+		id: "03",
 		title: "Shopwise E-commerce Website",
 		description:
 			"An e-commerce platform that allows users to browse products, add them to the shopping cart, and complete purchases easily.",
 		image: "/Shopwise.png",
 		link: "https://ecommerce-react-five-navy.vercel.app/",
+		githubLink: "https://github.com/ZiadHanny/ecommerceReact",
 		tags: ["React", "Vercel"],
 	},
 	{
-		id: "07",
+		id: "04",
 		title: "Tic-Tac-Toe — AI + Real-Time Multiplayer",
 		description:
 			"A monorepo tic-tac-toe game with three modes: local 2-player, an unbeatable Minimax AI with alpha-beta pruning across three difficulties, and real-time online multiplayer over Socket.io with room codes and reconnect handling. Shared game logic is a standalone, unit-tested package consumed by both the Next.js client and the Node server. WCAG 2.1 AA accessible.",
