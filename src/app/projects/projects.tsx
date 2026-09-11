@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Accessibility, ExternalLink, Github, LayoutDashboard } from "lucide-react";
+import { Accessibility, ExternalLink, Gamepad2, Github, LayoutDashboard } from "lucide-react";
 import { motion } from "framer-motion";
 import MouseTilt from "../components/MouseTilt";
 
@@ -61,6 +61,17 @@ const projectsData = [
 		image: "/Shopwise.png",
 		link: "https://ecommerce-react-five-navy.vercel.app/",
 		tags: ["React", "Vercel"],
+	},
+	{
+		id: "07",
+		title: "Tic-Tac-Toe — AI + Real-Time Multiplayer",
+		description:
+			"A monorepo tic-tac-toe game with three modes: local 2-player, an unbeatable Minimax AI with alpha-beta pruning across three difficulties, and real-time online multiplayer over Socket.io with room codes and reconnect handling. Shared game logic is a standalone, unit-tested package consumed by both the Next.js client and the Node server. WCAG 2.1 AA accessible.",
+		image: null,
+		icon: Gamepad2,
+		link: "https://tic-tac-toe-ai-multiplayer-client.vercel.app/",
+		githubLink: "https://github.com/ZiadHanny/tic-tac-toe-ai-multiplayer",
+		tags: ["Next.js", "TypeScript", "Socket.io", "Minimax AI", "WCAG 2.1 AA"],
 	},
 ];
 
