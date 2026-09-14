@@ -113,6 +113,9 @@ const Footer = () => {
                         © {new Date().getFullYear()} ZHM — Ziad Hany
                     </span>
                 </div>
+                <p className="relative z-10 text-center text-xs text-gray-600 pb-3">
+                    Made by Ziad Hany
+                </p>
             </motion.div>
         </footer>
     )
