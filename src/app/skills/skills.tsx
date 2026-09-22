@@ -90,7 +90,7 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="overflow-hidden w-full bg-gradient-to-b from-[#050414] to-[#0d0a22] py-16 md:py-20"
+            className="overflow-hidden w-full bg-gradient-to-b from-[#0B1220] to-[#111C33] py-16 md:py-20"
         >
             {/* Title */}
             <motion.h2
@@ -110,16 +110,16 @@ const Skills = () => {
                 onMouseLeave={() => setPaused(false)}
             >
                 {/* Edge fade masks */}
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-[#050414] to-transparent z-10" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-[#050414] to-transparent z-10" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-[#0B1220] to-transparent z-10" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-[#0B1220] to-transparent z-10" />
 
                 {/* Shared gradient definition referenced by every icon below */}
                 <svg width="0" height="0" className="absolute">
                     <defs>
                         <linearGradient id="skillIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#4338ca" />
-                            <stop offset="50%" stopColor="#7e22ce" />
-                            <stop offset="100%" stopColor="#c026d3" />
+                            <stop offset="0%" stopColor="#00D1B2" />
+                            <stop offset="50%" stopColor="#73DFD2" />
+                            <stop offset="100%" stopColor="#E6EDF3" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -129,7 +129,7 @@ const Skills = () => {
                         <motion.div
                             key={i}
                             whileHover={{ y: -6, scale: 1.05 }}
-                            className="min-w-[100px] sm:min-w-[120px] md:min-w-[140px] h-28 flex flex-col items-center justify-center border border-white/10 rounded-xl sm:rounded-2xl shadow-md bg-white/5 hover:shadow-lg hover:shadow-indigo-900/30 hover:border-indigo-400/30 transition-all duration-300"
+                            className="min-w-[100px] sm:min-w-[120px] md:min-w-[140px] h-28 flex flex-col items-center justify-center border border-white/10 rounded-xl sm:rounded-2xl shadow-md bg-white/5 hover:shadow-lg hover:shadow-[#0B1220]/30 hover:border-[#00D1B2]/30 transition-all duration-300"
                         >
                             {/* أيقونة */}
                             <div className="icon-gradient mb-2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center">
@@ -158,9 +158,9 @@ const Skills = () => {
                             key={group.title}
                             variants={item}
                             whileHover={{ y: -4 }}
-                            className="rounded-xl border border-white/10 bg-white/[0.03] p-5 hover:border-indigo-400/30 hover:bg-white/[0.05] transition-all"
+                            className="rounded-xl border border-white/10 bg-white/[0.03] p-5 hover:border-[#00D1B2]/30 hover:bg-white/[0.05] transition-all"
                         >
-                            <div className="flex items-center gap-2 mb-3 text-fuchsia-300">
+                            <div className="flex items-center gap-2 mb-3 text-[#00D1B2]">
                                 <Icon size={18} />
                                 <h3 className="text-sm font-semibold uppercase tracking-wide">{group.title}</h3>
                             </div>

@@ -66,9 +66,9 @@ const item = {
 
 const Experience = () => {
     return (
-        <section id="experience" className="relative bg-gradient-to-b from-[#0d0a22] to-[#050414] text-white py-16 md:py-24 overflow-hidden">
-            <div className="glow-blob w-72 h-72 bg-indigo-700/25 top-0 left-1/4" />
-            <div className="glow-blob w-72 h-72 bg-fuchsia-700/15 bottom-0 right-1/4" />
+        <section id="experience" className="relative bg-gradient-to-b from-[#111C33] to-[#0B1220] text-white py-16 md:py-24 overflow-hidden">
+            <div className="glow-blob w-72 h-72 bg-[#111C33]/25 top-0 left-1/4" />
+            <div className="glow-blob w-72 h-72 bg-[#00D1B2]/15 bottom-0 right-1/4" />
 
             <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
                 {/* Section Title */}
@@ -91,7 +91,7 @@ const Experience = () => {
                     viewport={{ once: true }}
                 >
                     {/* Timeline line */}
-                    <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-indigo-500 via-fuchsia-500 to-transparent hidden md:block" />
+                    <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-[#1B2A4A] via-[#00D1B2] to-transparent hidden md:block" />
 
                     {experiences.map((exp, idx) => (
                         <motion.div
@@ -101,7 +101,7 @@ const Experience = () => {
                             className="relative"
                         >
                             {/* Timeline Dot */}
-                            <div className="absolute -left-6 top-3 hidden md:flex items-center justify-center w-4 h-4 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 ring-4 ring-[#050414]">
+                            <div className="absolute -left-6 top-3 hidden md:flex items-center justify-center w-4 h-4 rounded-full bg-gradient-to-r from-[#1B2A4A] to-[#00D1B2] ring-4 ring-[#0B1220]">
                                 <Briefcase size={9} className="text-white" />
                             </div>
 

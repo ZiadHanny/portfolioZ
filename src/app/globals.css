@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
 :root {
-  --background: #050414;
-  --foreground: #f4f4f8;
-  --surface: #0b0a1f;
-  --accent-from: #4338ca;
-  --accent-via: #7e22ce;
-  --accent-to: #c026d3;
+  --background: #0B1220;
+  --foreground: #E6EDF3;
+  --surface: #111C33;
+  --accent-from: #00D1B2;
+  --accent-via: #73DFD2;
+  --accent-to: #E6EDF3;
   --font-caveat: 'Caveat', cursive;
 }
 
@@ -21,7 +21,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #7e22ce transparent;
+  scrollbar-color: #1B2A4A transparent;
 }
 
 body {
@@ -35,8 +35,8 @@ html {
 }
 
 ::selection {
-  background: #7e22ce;
-  color: #ffffff;
+  background: var(--accent-to);
+  color: var(--background);
 }
 
 ::-webkit-scrollbar {
@@ -84,7 +84,7 @@ html {
 .illustration-card {
   background: linear-gradient(145deg, #ffffff, #f1f0fb);
   border-radius: 1.5rem;
-  box-shadow: 0 30px 80px -20px rgba(88, 28, 135, 0.55);
+  box-shadow: 0 30px 80px -20px rgba(0, 209, 178, 0.35);
 }
 
 /* Cursor-tracked spotlight glow. Set --mx / --my (0-100) via JS on mousemove. */
@@ -95,7 +95,7 @@ html {
   z-index: 1;
   background: radial-gradient(
     600px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(124, 58, 237, 0.18),
+    rgba(0, 209, 178, 0.18),
     transparent 60%
   );
   transition: background 0.1s ease-out;

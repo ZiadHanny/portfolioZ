@@ -29,15 +29,15 @@ const fadeInScale = (delay = 0) => ({
 const Footer = () => {
     return (
 
-        <footer id="contactme" className="relative bg-gradient-to-b from-[#0b0a1f] to-[#050414] border-t border-white/10 overflow-hidden">
-            <div className="glow-blob w-72 h-72 bg-indigo-700/20 -bottom-10 left-1/4" />
+        <footer id="contactme" className="relative bg-gradient-to-b from-[#111C33] to-[#0B1220] border-t border-white/10 overflow-hidden">
+            <div className="glow-blob w-72 h-72 bg-[#111C33]/20 -bottom-10 left-1/4" />
 
             {/* Main Section */}
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
                 <motion.div
                     {...fadeInUp(0)}
                     whileHover={{ scale: 1.01 }}
-                    className="rounded-3xl bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 px-6 py-10 md:px-14 md:py-14 flex flex-col md:flex-row justify-between items-center gap-10 shadow-xl shadow-purple-950/60 border border-white/10"
+                    className="rounded-3xl bg-gradient-to-r from-[#111C33] via-[#1B2A4A] to-[#00D1B2] px-6 py-10 md:px-14 md:py-14 flex flex-col md:flex-row justify-between items-center gap-10 shadow-xl shadow-[#0B1220]/60 border border-white/10"
                 >
                     {/* Left Section */}
                     <div className="text-center md:text-left">
@@ -81,7 +81,7 @@ const Footer = () => {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-2 bg-white/10 border border-white/30 rounded-lg text-white hover:bg-white hover:text-indigo-600 transition"
+                                    className="p-2 bg-white/10 border border-white/30 rounded-lg text-white hover:bg-white hover:text-[#1B2A4A] transition"
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -104,7 +104,7 @@ const Footer = () => {
                 <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm">
                     {/* Logo + Brand */}
                     <div className="flex items-center gap-2 font-semibold text-white">
-                        <Circle size={18} className="text-indigo-400" fill="currentColor" />
+                        <Circle size={18} className="text-[#00D1B2]" fill="currentColor" />
                         <span className="font-caveat text-xl">ZHM</span>
                     </div>
 

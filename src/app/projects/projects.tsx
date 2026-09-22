@@ -55,8 +55,8 @@ const Projects = () => {
 	return (
 		<section
 			id="projects"
-			className="relative bg-gradient-to-b from-[#050414] to-[#0b0a1f] text-white py-20 px-6 md:px-12 overflow-hidden">
-			<div className="glow-blob w-72 h-72 bg-fuchsia-700/15 top-0 right-1/4" />
+			className="relative bg-gradient-to-b from-[#0B1220] to-[#111C33] text-white py-20 px-6 md:px-12 overflow-hidden">
+			<div className="glow-blob w-72 h-72 bg-[#00D1B2]/15 top-0 right-1/4" />
 
 			<div className="relative z-10 max-w-6xl mx-auto">
 				<motion.h2
@@ -99,7 +99,7 @@ const Projects = () => {
 												className="rounded-xl transition duration-500 group-hover:brightness-75 w-full h-auto"
 											/>
 										) : (
-											<div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-fuchsia-900 transition duration-500 group-hover:brightness-90">
+											<div className="w-full aspect-[3/2] flex items-center justify-center bg-gradient-to-br from-[#0B1220] via-[#111C33] to-[#00D1B2] transition duration-500 group-hover:brightness-90">
 												{React.createElement(project.icon ?? LayoutDashboard, {
 													size: 64,
 													className: "text-white/70",
@@ -107,7 +107,7 @@ const Projects = () => {
 											</div>
 										)}
 										<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/40">
-											<span className="flex items-center gap-2 text-white font-medium bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-4 py-2 rounded-lg">
+											<span className="flex items-center gap-2 text-white font-medium bg-gradient-to-r from-[#1B2A4A] to-[#00D1B2] px-4 py-2 rounded-lg">
 												<ExternalLink className="w-4 h-4" />
 												View Project
 											</span>
@@ -134,7 +134,7 @@ const Projects = () => {
 									{project.tags.map((tag) => (
 										<span
 											key={tag}
-											className="text-xs font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-400/20 rounded-full px-3 py-1"
+											className="text-xs font-medium text-[#00D1B2] bg-[#1B2A4A]/10 border border-[#00D1B2]/20 rounded-full px-3 py-1"
 										>
 											{tag}
 										</span>
@@ -149,7 +149,7 @@ const Projects = () => {
 											href={project.link}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
+											className="group inline-flex items-center gap-2 text-white hover:text-[#00D1B2] transition"
 										>
 											<ExternalLink className="w-5 h-5" />
 											<span className="relative">
@@ -163,7 +163,7 @@ const Projects = () => {
 											href={project.githubLink}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="group inline-flex items-center gap-2 text-white hover:text-indigo-300 transition"
+											className="group inline-flex items-center gap-2 text-white hover:text-[#00D1B2] transition"
 										>
 											<Github className="w-5 h-5" />
 											<span className="relative">
