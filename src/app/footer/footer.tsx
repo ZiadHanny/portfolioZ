@@ -29,15 +29,15 @@ const fadeInScale = (delay = 0) => ({
 const Footer = () => {
     return (
 
-        <footer id="contactme" className="relative bg-gradient-to-b from-[#0b0a1f] to-[#050414] border-t border-white/10 overflow-hidden">
-            <div className="glow-blob w-72 h-72 bg-indigo-700/20 -bottom-10 left-1/4" />
+        <footer id="contactme" className="relative bg-gradient-to-b from-[#0a120c] to-[#050805] border-t border-white/10 overflow-hidden">
+            <div className="glow-blob w-72 h-72 bg-green-800/20 -bottom-10 left-1/4" />
 
             {/* Main Section */}
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
                 <motion.div
                     {...fadeInUp(0)}
                     whileHover={{ scale: 1.01 }}
-                    className="rounded-3xl bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 px-6 py-10 md:px-14 md:py-14 flex flex-col md:flex-row justify-between items-center gap-10 shadow-xl shadow-purple-950/60 border border-white/10"
+                    className="rounded-3xl bg-gradient-to-r from-green-800 via-green-700 to-green-500 px-6 py-10 md:px-14 md:py-14 flex flex-col md:flex-row justify-between items-center gap-10 shadow-xl shadow-green-950/60 border border-white/10"
                 >
                     {/* Left Section */}
                     <div className="text-center md:text-left">
@@ -81,7 +81,7 @@ const Footer = () => {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-2 bg-white/10 border border-white/30 rounded-lg text-white hover:bg-white hover:text-indigo-600 transition"
+                                    className="p-2 bg-white/10 border border-white/30 rounded-lg text-white hover:bg-white hover:text-green-700 transition"
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -104,12 +104,12 @@ const Footer = () => {
                 <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm">
                     {/* Logo + Brand */}
                     <div className="flex items-center gap-2 font-semibold text-white">
-                        <Circle size={18} className="text-indigo-400" fill="currentColor" />
-                        <span className="font-caveat text-xl">ZHM</span>
+                        <Circle size={18} className="text-green-400" fill="currentColor" />
+                        <span className="font-mono font-bold tracking-wider text-xl">ZHM</span>
                     </div>
 
                     {/* Copyright */}
-                    <span className="text-gray-500 text-center md:text-right font-caveat text-lg">
+                    <span className="text-gray-500 text-center md:text-right font-mono text-sm">
                         © {new Date().getFullYear()} ZHM — Ziad Hany
                     </span>
                 </div>

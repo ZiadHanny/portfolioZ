@@ -38,9 +38,9 @@ const Navbar = () => {
           animate={{ rotate: [0, 360] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
         >
-          <Circle size={18} className="text-fuchsia-400" fill="currentColor" />
+          <Circle size={18} className="text-green-300" fill="currentColor" />
         </motion.span>
-        <span className="font-caveat text-2xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-fuchsia-400">
+        <span className="font-mono font-bold tracking-wider text-2xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-300">
           ZHM
         </span>
       </motion.div>
@@ -55,7 +55,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             {link}
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-indigo-400 to-fuchsia-400 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-green-400 to-green-300 transition-all duration-300 group-hover:w-full"></span>
           </motion.a>
         ))}
       </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
         href="/Ziad-Hany-Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white px-5 py-2 rounded-lg items-center gap-2 shadow-md shadow-purple-900/50 hover:shadow-lg hover:shadow-purple-800/60 hover:scale-105 transition"
+        className="hidden md:flex bg-gradient-to-r from-green-700 via-green-500 to-green-400 text-white px-5 py-2 rounded-lg items-center gap-2 shadow-md shadow-green-900/50 hover:shadow-lg hover:shadow-green-600/60 hover:scale-105 transition"
         whileHover={{ y: -2 }}
       >
         My Resume
@@ -103,7 +103,7 @@ const Navbar = () => {
               <a
                 key={i}
                 href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
-                className="text-lg font-medium text-gray-200 hover:text-fuchsia-400 transition"
+                className="text-lg font-medium text-gray-200 hover:text-green-300 transition"
                 onClick={() => setIsOpen(false)}
               >
                 {link}
@@ -113,7 +113,7 @@ const Navbar = () => {
               href="/Ziad-Hany-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition"
+              className="bg-gradient-to-r from-green-700 via-green-500 to-green-400 text-white px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition"
               onClick={() => setIsOpen(false)}
             >
               My Resume

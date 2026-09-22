@@ -25,7 +25,7 @@ const ScrollToTop = () => {
                     whileTap={{ scale: 0.9 }}
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     aria-label="Scroll to top"
-                    className="fixed bottom-6 right-6 z-50 p-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-fuchsia-600 shadow-lg shadow-indigo-300"
+                    className="fixed bottom-6 right-6 z-50 p-3 rounded-full text-white bg-gradient-to-r from-green-700 to-green-400 shadow-lg shadow-green-300"
                 >
                     <ArrowUp size={20} />
                 </motion.button>

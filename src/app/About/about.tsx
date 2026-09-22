@@ -24,9 +24,9 @@ const About = () => {
 	return (
 		<section
 			id="aboutme"
-			className="relative py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#050414] via-[#0d0a22] to-[#050414] overflow-hidden"
+			className="relative py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#050805] via-[#0a120c] to-[#050805] overflow-hidden"
 		>
-			<div className="glow-blob w-64 h-64 bg-indigo-700/25 top-10 right-10" />
+			<div className="glow-blob w-64 h-64 bg-green-800/25 top-10 right-10" />
 
 			<div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
 				{/* صورة جانبية */}
@@ -81,7 +81,7 @@ const About = () => {
 							<motion.div
 								key={i}
 								whileHover={{ y: -4, scale: 1.03 }}
-								className="rounded-xl border border-white/10 bg-white/5 shadow-sm py-4 px-2 hover:border-indigo-400/30 hover:shadow-lg hover:shadow-indigo-900/30 transition-all"
+								className="rounded-xl border border-white/10 bg-white/5 shadow-sm py-4 px-2 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-900/30 transition-all"
 							>
 								<p className="text-2xl md:text-3xl font-extrabold gradient-text">{stat.value}</p>
 								<p className="text-xs md:text-sm text-gray-400 mt-1">{stat.label}</p>
