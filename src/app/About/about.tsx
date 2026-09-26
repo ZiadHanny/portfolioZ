@@ -7,7 +7,7 @@ import MouseTilt from "../components/MouseTilt";
 import { getYearsOfExperience } from "../components/experience";
 
 const About = () => {
-	const [years, setYears] = useState(2);
+	const [years, setYears] = useState(3);
 
 	useEffect(() => {
 		// Computed client-side so it keeps ticking up automatically on each
